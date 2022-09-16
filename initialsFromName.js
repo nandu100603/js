@@ -7,6 +7,18 @@
 
 let createInitialsFromName = (name) => {
   // Complete the function
+  let names = name.split(" ");
+  let len=names.length;
+  if (len===1){
+    let letter=(names[0][0]+names[0][1]).toUpperCase();
+    return letter
+  }
+  else{
+    let letter1=names[0][0];
+    let letter2=names[len-1][0];
+    let final=letter1+letter2;
+    return final.toUpperCase()
+  }
 };
 
 module.exports = createInitialsFromName;
