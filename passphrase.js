@@ -3,17 +3,17 @@ let isValidPassphrase = (text) => {
   // We'll learn more about functions in the next level. For now, just write your code "inside" it.
 
   // First step. Let's split the text into different words. How do we do that?
-  // let words = ???
+  let words =  text.split(" ");
 
   // How do we ensure that there are four words?
-  // let minimumFourWords = ???
+  let minimumFourWords = (words.length>=4);
 
   // Since the number of words in our passphrase is unknown, let's check each word,
   // regardless of how many there are.
   let minimumTwoCharsEach = words.every(word => word.length >= 2);
 
   // Finally, let's check if both conditions are true...
-  // let conditionsSatisfied = ???
+  let conditionsSatisfied = (minimumFourWords && minimumTwoCharsEach);
 
   // Let's "return" the value from this function. We'll learn more about this in the next level.
   return conditionsSatisfied;
